@@ -104,7 +104,7 @@ export const permissoesDisponiveis = [
 ]
 
 export const usuarios = [
-  { id: 'usr1', nome: 'Pedro Jorge', email: 'pedro.jorge@ufcat.edu.br', papel: 'Responsável PROGRAD', permissoes: ['solicitar', 'aprovar', 'gerenciar_salas', 'gerenciar_calendario', 'gerenciar_usuarios', 'gerenciar_grade_fixa', 'ver_auditoria'] },
+  { id: 'usr1', nome: 'Pedro Jorge', email: 'pedro.jrge@ufcat.edu.br', papel: 'Responsável PROGRAD', permissoes: ['solicitar', 'aprovar', 'gerenciar_salas', 'gerenciar_calendario', 'gerenciar_usuarios', 'gerenciar_grade_fixa', 'ver_auditoria'] },
   { id: 'usr2', nome: 'Luanna Lobato', email: 'luanna.lobato@ufcat.edu.br', papel: 'Docente', permissoes: ['solicitar'] },
   { id: 'usr3', nome: 'Thiago Bittar', email: 'thiago.bittar@ufcat.edu.br', papel: 'Docente', permissoes: ['solicitar'] },
   { id: 'usr4', nome: 'Secretaria de Computação', email: 'secretaria.computacao@ufcat.edu.br', papel: 'Secretaria de curso', permissoes: ['solicitar'] },
