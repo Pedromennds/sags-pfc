@@ -1,0 +1,52 @@
+.gu-lista { display: flex; flex-direction: column; gap: var(--sp-3); }
+
+.gu-item {
+  padding: var(--sp-4) var(--sp-5);
+  display: grid;
+  grid-template-columns: 40px 1fr auto 1fr auto;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.gu-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  display: flex; align-items: center; justify-content: center;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.gu-nome { font-weight: 600; font-size: var(--fs-sm); }
+.gu-email { font-size: var(--fs-xs); color: var(--color-ink-faint); margin-top: 2px; }
+
+.gu-papel {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  background: var(--color-surface-sunken);
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  justify-self: start;
+}
+
+.gu-permissoes { display: flex; flex-wrap: wrap; gap: 6px; }
+.gu-permissao-tag {
+  font-size: var(--fs-xs);
+  background: var(--color-blue-soft);
+  color: var(--color-blue);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.gu-modal { max-width: 460px; }
+
+@media (max-width: 900px) {
+  .gu-item { grid-template-columns: 40px 1fr auto; }
+  .gu-permissoes { grid-column: 1 / -1; }
+}
+
+.gu-acoes { display: flex; gap: 4px; justify-self: end; }

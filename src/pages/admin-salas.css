@@ -1,0 +1,31 @@
+.as-toolbar { display: flex; justify-content: flex-end; margin-bottom: var(--sp-4); }
+
+.as-table-card { overflow-x: auto; }
+.as-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.as-table th {
+  text-align: left;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--color-ink-faint);
+  font-weight: 600;
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--color-border);
+}
+.as-table td {
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--color-border);
+}
+.as-table tr:last-child td { border-bottom: none; }
+.as-numero { font-weight: 600; font-family: var(--font-display); }
+.as-recursos-col { color: var(--color-ink-soft); max-width: 280px; }
+.as-acoes { display: flex; gap: 4px; justify-content: flex-end; }
+.as-icon-btn { width: 30px; height: 30px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
+.as-aviso-manutencao {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-xs);
+  color: var(--color-slate);
+  margin-top: 8px;
+}

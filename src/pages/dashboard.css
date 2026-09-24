@@ -1,0 +1,81 @@
+.dashboard { display: flex; flex-direction: column; gap: var(--sp-5); }
+
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+}
+
+.dash-stat {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4) var(--sp-5);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+.dash-stat-icon {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+.dash-stat-laranja .dash-stat-icon { background: var(--color-primary); }
+.dash-stat-neutro .dash-stat-icon { background: var(--color-amber); }
+.dash-stat-vermelho .dash-stat-icon { background: var(--color-red); }
+
+.dash-stat strong {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  display: block;
+  color: var(--color-ink);
+}
+.dash-stat p { color: var(--color-ink-soft); font-size: var(--fs-sm); margin-top: 2px; }
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+  align-items: start;
+}
+
+.dash-panel { padding: var(--sp-5); }
+.dash-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-4);
+}
+.dash-panel-head h2 { font-size: var(--fs-md); }
+.dash-see-all {
+  display: flex; align-items: center; gap: 4px;
+  font-size: var(--fs-sm); font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.dash-lista li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding: var(--sp-3) 0;
+  border-top: 1px solid var(--color-border);
+}
+.dash-lista li:first-child { border-top: none; }
+.dash-lista li p { font-size: var(--fs-sm); font-weight: 500; color: var(--color-ink); }
+.dash-lista li span {
+  display: flex; align-items: center; gap: 4px;
+  font-size: var(--fs-xs); color: var(--color-ink-faint); margin-top: 3px;
+}
+.dash-lista-blocos li strong { font-size: var(--fs-sm); display: block; color: var(--color-ink); }
+.dash-lista-blocos li span { font-size: var(--fs-xs); color: var(--color-ink-faint); margin-top: 2px; }
+
+.btn-sm { height: 32px; padding: 0 12px; font-size: var(--fs-xs); }
+
+@media (max-width: 1080px) {
+  .dash-stats { grid-template-columns: 1fr; }
+  .dash-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,56 @@
+.ap-busca { margin-bottom: var(--sp-4); padding: 0 12px; }
+.ap-busca input { border: none; height: 42px; flex: 1; background: transparent; color: var(--color-ink); }
+.ap-busca input:focus { outline: none; }
+
+.ap-lista { display: flex; flex-direction: column; gap: var(--sp-3); }
+.ap-item {
+  padding: var(--sp-4) var(--sp-5);
+  transition: box-shadow .3s var(--ease-standard), border-color .3s var(--ease-standard);
+}
+.ap-item.is-destacado {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-soft);
+}
+.ap-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+}
+.ap-info { flex: 1; min-width: 0; }
+.ap-titulo-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ap-motivo { font-weight: 600; font-size: var(--fs-md); }
+.ap-tipo-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  padding: 3px 9px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.ap-tipo-tag.is-fixa { background: var(--color-primary-soft); color: var(--color-primary-dark); }
+.ap-tipo-tag.is-avulsa { background: var(--color-slate-soft); color: var(--color-slate); }
+.ap-solicitante { font-size: var(--fs-sm); color: var(--color-ink-faint); margin-top: 4px; }
+.ap-meta { display: flex; gap: var(--sp-4); margin-top: 8px; flex-wrap: wrap; }
+.ap-meta span { display: flex; align-items: center; gap: 5px; font-size: var(--fs-sm); color: var(--color-ink-soft); }
+.ap-espera {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-ink-faint);
+  background: var(--color-surface-sunken);
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ap-espera.is-atrasada { background: var(--color-red-soft); color: var(--color-red); }
+.ap-actions { display: flex; gap: var(--sp-2); flex-shrink: 0; }
+
+@media (max-width: 700px) {
+  .ap-linha { flex-wrap: wrap; }
+  .ap-actions { width: 100%; justify-content: flex-end; }
+}

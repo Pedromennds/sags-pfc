@@ -1,0 +1,124 @@
+.salas-filtros {
+  display: flex;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  margin-bottom: var(--sp-5);
+  flex-wrap: wrap;
+}
+.salas-busca {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-ink-faint);
+}
+.salas-busca input {
+  border: none;
+  height: 38px;
+  flex: 1;
+  background: transparent;
+  color: var(--color-ink);
+}
+.salas-busca input:focus { outline: none; }
+
+.salas-filtros select {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0 12px;
+  height: 40px;
+  background: var(--color-surface);
+  font-size: var(--fs-sm);
+}
+
+.salas-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  height: 40px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.salas-toggle input { accent-color: var(--color-primary); width: 15px; height: 15px; }
+
+.salas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: var(--sp-4);
+}
+
+.sala-card {
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  transition: border-color .15s var(--ease-standard), transform .15s var(--ease-standard), box-shadow .15s var(--ease-standard);
+}
+.sala-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.sala-card.is-manutencao { background: var(--color-surface-sunken); }
+.sala-card.is-manutencao:hover { border-color: var(--color-border-strong); box-shadow: none; transform: none; }
+.sala-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--sp-3);
+}
+.sala-numero {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+}
+.sala-bloco {
+  font-size: var(--fs-xs);
+  color: var(--color-ink-faint);
+  font-weight: 500;
+}
+.sala-capacidade {
+  display: flex; align-items: center; gap: 6px;
+  font-size: var(--fs-sm);
+  color: var(--color-ink-soft);
+  margin-bottom: var(--sp-3);
+}
+.sala-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  margin-top: auto;
+}
+.sala-recursos { display: flex; gap: 6px; }
+.sala-recurso-tag {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+  display: flex; align-items: center; justify-content: center;
+}
+.sala-sem-recurso { font-size: var(--fs-xs); color: var(--color-ink-faint); }
+
+.salas-bloco-secao + .salas-bloco-secao { margin-top: var(--sp-6); }
+.salas-bloco-titulo {
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: .05em;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-2);
+  border-bottom: 2px solid var(--color-primary-soft);
+}
+.salas-mostrar-mais {
+  display: block;
+  margin: var(--sp-4) auto 0;
+}

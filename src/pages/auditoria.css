@@ -1,0 +1,25 @@
+.aud-lista { display: flex; flex-direction: column; gap: var(--sp-3); }
+.aud-item {
+  padding: var(--sp-4) var(--sp-5);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+.aud-icone {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.acao-aprovou { background: var(--color-primary-soft); color: var(--color-primary-dark); }
+.acao-recusou { background: var(--color-red-soft); color: var(--color-red); }
+.acao-cancelou { background: var(--color-amber-soft); color: var(--color-amber); }
+.aud-info { flex: 1; min-width: 0; }
+.aud-info p { font-size: var(--fs-sm); }
+.aud-detalhe { display: block; font-size: var(--fs-xs); color: var(--color-ink-faint); margin-top: 3px; }
+.aud-quando { font-size: var(--fs-xs); color: var(--color-ink-faint); white-space: nowrap; flex-shrink: 0; }
+
+@media (max-width: 640px) {
+  .aud-item { flex-wrap: wrap; }
+  .aud-quando { width: 100%; padding-left: 50px; }
+}

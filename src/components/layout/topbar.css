@@ -1,0 +1,27 @@
+/* Faixa de título da página: fundo claro de ponta a ponta, conteúdo alinhado à coluna central */
+.topbar {
+  background: var(--color-surface-sunken);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--sp-6);
+}
+.topbar-inner {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--sp-6) var(--page-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+}
+.topbar h1 { font-size: var(--fs-xl); line-height: var(--lh-tight); }
+.topbar-subtitle {
+  font-size: var(--fs-sm);
+  color: var(--color-ink-soft);
+  margin-top: 6px;
+}
+.topbar-actions { display: flex; align-items: center; gap: var(--sp-3); flex-shrink: 0; }
+
+@media (max-width: 560px) {
+  .topbar-inner { flex-direction: column; align-items: flex-start; padding-top: var(--sp-5); padding-bottom: var(--sp-5); }
+  .topbar-actions { width: 100%; }
+}

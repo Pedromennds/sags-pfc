@@ -1,0 +1,160 @@
+.sala-detalhe-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-4);
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.voltar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+}
+.voltar-link:hover { color: var(--color-primary-dark); }
+
+.aviso-manutencao {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--color-slate-soft);
+  color: var(--color-slate);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--sp-4);
+}
+.aviso-manutencao svg { flex-shrink: 0; }
+.aviso-manutencao strong { color: var(--color-ink); }
+
+.horario-grid-card.is-disabled { opacity: .6; }
+
+.sala-detalhe-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--sp-4);
+  align-items: start;
+}
+
+.sala-info-card { padding: var(--sp-5); }
+.sala-info-row {
+  padding: var(--sp-3) 0;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sala-info-row:first-child { border-top: none; padding-top: 0; }
+.sala-info-row > span { font-size: var(--fs-xs); color: var(--color-ink-faint); }
+.sala-info-row > strong { display: flex; align-items: center; gap: 6px; font-size: var(--fs-sm); }
+.sala-status-badge { align-self: flex-start; }
+.sala-info-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.sala-info-tag {
+  font-size: var(--fs-xs);
+  background: var(--color-surface-sunken);
+  padding: 4px 9px;
+  border-radius: 999px;
+  color: var(--color-ink-soft);
+}
+
+.sala-info-legenda {
+  margin-top: var(--sp-4);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sala-info-legenda p { display: flex; align-items: center; gap: 8px; font-size: var(--fs-xs); color: var(--color-ink-soft); }
+.legenda-dot { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.legenda-livre { background: var(--color-surface); border: 1.5px solid var(--color-border-strong); }
+.legenda-ocupado { background: repeating-linear-gradient(135deg, var(--color-slate-soft), var(--color-slate-soft) 2px, #D5D9DB 2px, #D5D9DB 4px); }
+.legenda-selecionado { background: var(--color-primary); }
+
+.horario-grid-card { padding: var(--sp-4); overflow: hidden; }
+.horario-grid-scroll { overflow-x: auto; }
+.horario-grid-dica {
+  display: none;
+  font-size: var(--fs-xs);
+  color: var(--color-ink-faint);
+  margin-bottom: var(--sp-2);
+}
+@media (max-width: 700px) {
+  .horario-grid-dica { display: block; }
+}
+
+.horario-grid {
+  display: grid;
+  min-width: 620px;
+}
+
+.hg-cell {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+}
+.hg-corner {
+  font-size: var(--fs-xs);
+  color: var(--color-ink-faint);
+  font-weight: 600;
+}
+.hg-dia-header {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.hg-turno-label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-soft);
+  padding: 5px 10px;
+  margin: 6px 0 4px;
+  border-radius: var(--radius-sm);
+}
+.hg-hora {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+.hg-hora strong { font-size: var(--fs-xs); font-weight: 600; }
+.hg-hora span { font-size: 10px; color: var(--color-ink-faint); }
+
+.hg-slot {
+  height: 38px;
+  margin: 2px;
+  border-radius: 6px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface);
+  transition: all .12s var(--ease-standard);
+}
+.hg-slot.is-livre:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+  cursor: pointer;
+}
+.hg-slot.is-ocupado {
+  background: repeating-linear-gradient(135deg, var(--color-slate-soft), var(--color-slate-soft) 4px, #D5D9DB 4px, #D5D9DB 8px);
+  border-color: var(--color-border);
+  cursor: not-allowed;
+}
+.hg-slot.is-selecionado {
+  background: var(--color-primary);
+  border-color: var(--color-primary-dark);
+}
+
+@media (max-width: 900px) {
+  .sala-detalhe-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .sala-detalhe-topo .btn { width: 100%; }
+}

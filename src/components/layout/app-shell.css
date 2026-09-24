@@ -1,0 +1,17 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+.app-content {
+  flex: 1;
+  min-width: 0;
+  padding-bottom: var(--sp-8);
+}
+/* Coluna de conteúdo: mesma largura máxima e margem lateral do título da página */
+.page-body {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-gutter);
+}
